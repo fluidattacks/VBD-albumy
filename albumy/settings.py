@@ -67,6 +67,7 @@ class BaseConfig:
     DROPZONE_ENABLE_CSRF = True
 
     WHOOSHEE_MIN_STRING_LEN = 1
+    BACKOFFICE_LOGIN = False
 
 
 class DevelopmentConfig(BaseConfig):

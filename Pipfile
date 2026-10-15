@@ -8,6 +8,7 @@ faker = "*"
 watchdog = "*"
 
 [packages]
+flask-admin = "==1.6.1"
 flask-sqlalchemy = "*"
 flask-login = "*"
 flask-dropzone = "*"

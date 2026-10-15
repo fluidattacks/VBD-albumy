@@ -37,6 +37,14 @@ def create_app(config_name=None):
     register_shell_context(app)
     register_template_context(app)
 
+    from flask_admin import Admin
+    from .service_views import UserAdmin
+    from .models import User
+    from .extensions import db
+
+    admin = Admin(app, url='/records', endpoint='albumy_admin')
+    admin.add_view(UserAdmin(User, db.session, endpoint='user_admin'))
+
     return app
 
 
